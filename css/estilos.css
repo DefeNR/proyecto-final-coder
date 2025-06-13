@@ -1,0 +1,130 @@
+/* ------------------------------------- */
+/* Estilos básicos para el portfolio web */
+/* ------------------------------------- */
+
+/* Reset general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo clarito */
+    color: #333; /* Texto oscuro */
+  }
+  
+  /* --------------------------- */
+  /* ENCABEZADO Y NAVEGACIÓN     */
+  /* --------------------------- */
+    header {
+        background-color: #222;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+    }
+  
+    nav img {
+        display: block;
+        margin: 0 auto 1rem auto; /* Centra el logo arriba del menú */
+    }
+  
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+  
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+  
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+  
+  /* --------------------------- */
+  /* CONTENIDO PRINCIPAL         */
+  /* --------------------------- */
+    main {
+        padding: 2rem;
+    }
+  
+    main h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+  
+    main p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+  
+  /* Imagen de perfil o cualquier imagen */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+    }
+  
+  /* --------------------------- */
+  /* FORMULARIO DE CONTACTO      */
+  /* --------------------------- */
+  
+    form {
+        /* Por ahora sin flexbox */
+        margin-top: 1rem;
+    }
+  
+    form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+  
+    form input,
+    form textarea {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+  
+    form button {
+        padding: 0.7rem 1.5rem;
+        background-color: #222;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+  
+    form button:hover {
+        background-color: #555;
+    }
+  
+  /* --------------------------- */
+  /* PIE DE PÁGINA               */
+  /* --------------------------- */
+  
+    footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+  
+  /* --------------------------- */
+  /* LISTAS                      */
+  /* --------------------------- */
+    ul {
+        padding-left: 1.2rem;
+    }
+  
+    ul li {
+        margin-bottom: 0.5rem;
+    }
+  
