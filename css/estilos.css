@@ -1,130 +1,504 @@
-/* ------------------------------------- */
-/* Estilos básicos para el portfolio web */
-/* ------------------------------------- */
-
-/* Reset general */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Fondo clarito */
-    color: #333; /* Texto oscuro */
+/* ==========================================
+   PALETA DE COLORES Y FUENTES
+   ========================================== */
+   :root {
+    --blanco: #FFFFFF;
+    --negro: #0F0F0F;
+    --gris: #A5A5A5;
+    --amarillo: #FFD738;
+  
+    --fuente-titulo: 'Roboto', Arial, Helvetica, sans-serif;
+    --fuente-texto: 'Inter', Verdana, Arial, sans-serif;
   }
   
-  /* --------------------------- */
-  /* ENCABEZADO Y NAVEGACIÓN     */
-  /* --------------------------- */
-    header {
-        background-color: #222;
-        color: #fff;
-        padding: 1rem;
-        text-align: center;
-    }
+  /* ==========================================
+     RESETEO Y BASE
+     ========================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
-    nav img {
-        display: block;
-        margin: 0 auto 1rem auto; /* Centra el logo arriba del menú */
-    }
+  body {
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: var(--fuente-texto);
+    min-height: 100vh;
+  }
   
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+  /* ==========================================
+     NAVBAR PERSONALIZADO (DESKTOP)
+     ========================================== */
+  .navbar-personalizado {
+    display: none;
+  }
   
-    nav ul li {
-        display: inline-block;
-        margin: 0 10px;
+  @media (min-width: 768px) {
+    .navbar-personalizado {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2.5rem;
+      background: var(--amarillo);
     }
-  
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-  
-  /* --------------------------- */
-  /* CONTENIDO PRINCIPAL         */
-  /* --------------------------- */
-    main {
-        padding: 2rem;
-    }
-  
-    main h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-  
-    main p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-  
-  /* Imagen de perfil o cualquier imagen */
-    img {
+    .logo img {
+        width: 70px;
         max-width: 100%;
         height: auto;
-        display: block;
-        margin: 1rem auto;
+      }
+      @media (min-width: 768px) {
+        .logo img {
+          width: 90px;
+        }
     }
-  
-  /* --------------------------- */
-  /* FORMULARIO DE CONTACTO      */
-  /* --------------------------- */
-  
-    form {
-        /* Por ahora sin flexbox */
-        margin-top: 1rem;
+    .menu {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
     }
-  
-    form label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
+    .menu li a {
+      text-decoration: none;
+      color: var(--negro);
+      font-family: var(--fuente-titulo);
+      font-size: 1.1rem;
+      font-weight: 900;
+      transition: color 0.2s;
     }
-  
-    form input,
-    form textarea {
-        display: block;
-        width: 100%;
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+    .menu li a:hover {
+      color: var(--blanco);
     }
+  }
   
-    form button {
-        padding: 0.7rem 1.5rem;
-        background-color: #222;
-        color: white;
-        border: none;
-        cursor: pointer;
+ /* ========================
+   MENÚ HAMBURGUESA BOOTSTRAP (mobile)
+   ======================== */
+
+/* Fondo amarillo del menú desplegado */
+.navbar.navbar-dark.bg-dark {
+    background: var(--amarillo) !important;
+    border-bottom: 2px solid var(--negro);
+  }
+  
+  /* Fondo y bordes del dropdown */
+  .navbar-collapse {
+    background: var(--amarillo);
+    border-radius: 0 0 12px 12px;
+  }
+  
+  /* Colores de los links */
+  .navbar-nav .nav-link {
+    color: var(--negro) !important;
+    font-family: var(--fuente-titulo);
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+  }
+  
+  /* Hover blanco y texto negro */
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    background: var(--blanco);
+    color: var(--negro) !important;
+  }
+  
+  /* El ícono hamburguesa (tres rayitas) en negro */
+  .navbar-toggler {
+    border-color: var(--negro);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(15,15,15,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  
+  /* ==========================================
+     FOOTER
+     ========================================== */
+  .footer {
+    background: var(--negro);
+    color: var(--gris);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ==========================================
+     TIPOGRAFÍA
+     ========================================== */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulo);
+    font-weight: 900;
+    color: var(--blanco);
+  }
+  
+  p, li, input, textarea, label, .card-body {
+    font-family: var(--fuente-texto);
+  }
+  
+  /* ==========================================
+   SECCIÓN BIENVENIDA (index.html)
+   ========================================== */
+/* Contenedor principal de la sección Hola */
+.seccion-hola {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2.5rem 1rem;
+  }
+  
+  /* Estructura responsive: imagen + texto */
+  .bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Imagen de perfil con box model y borde de marca */
+  .perfil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--amarillo);
+    object-fit: cover;
+    background: var(--gris);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+  }
+  
+  /* Responsive: fila en desktop/tablet */
+  @media (min-width: 768px) {
+    .bienvenida {
+      flex-direction: row;
+      text-align: left;
+      gap: 2.5rem;
     }
-  
-    form button:hover {
-        background-color: #555;
+    .perfil-img {
+      width: 200px;
+      height: 200px;
     }
+  }
+
+  /* ==========================================
+   SECCIÓN SOY LO QUE SOY 
+   ========================================== */
+.seccion-soy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2.5rem 1rem;
+  }
   
-  /* --------------------------- */
-  /* PIE DE PÁGINA               */
-  /* --------------------------- */
+  .perfil-profesional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.06);
+    max-width: 650px;
+    width: 100%;
+    padding: 2rem 1.2rem;
+  }
   
-    footer {
-        background-color: #222;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
+  .descripcion h2 {
+    font-family: var(--fuente-titulo);
+    font-weight: 900;
+    color: var(--amarillo);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .descripcion p {
+    font-family: var(--fuente-texto);
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  .skills {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.5rem;
+  }
+  
+  .skills li {
+    background: var(--gris);
+    color: var(--negro);
+    border-radius: 8px;
+    padding: 0.35em 1em;
+    font-size: 1rem;
+    font-family: var(--fuente-texto);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.3em;
+    transition: background 0.18s;
+  }
+  .skills li:hover {
+    background: var(--amarillo);
+    color: var(--negro);
+  }
+  
+  @media (min-width: 768px) {
+    .perfil-profesional {
+      padding: 2.5rem 2.2rem;
     }
-  
-  /* --------------------------- */
-  /* LISTAS                      */
-  /* --------------------------- */
-    ul {
-        padding-left: 1.2rem;
+    .descripcion h2 {
+      font-size: 2.4rem;
     }
+  }
   
-    ul li {
-        margin-bottom: 0.5rem;
+  /* ==========================================
+   SECCIÓN PROYECTOS (proyectos.html)
+   ========================================== */
+/* Galería con grid responsive */
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .proyecto-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+    border: 1.5px solid var(--gris);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: var(--gris);
+    border-bottom: 1.5px solid var(--gris);
+  }
+  
+  .card-body {
+    padding: 1.2rem 1.3rem 1.2rem 1.3rem;
+  }
+  
+  .card-title {
+    font-family: var(--fuente-titulo);
+    color: var(--amarillo);
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .card-text {
+    font-family: var(--fuente-texto);
+    color: var(--blanco);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Desktop: varias columnas */
+  @media (min-width: 600px) {
+    .galeria-proyectos {
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
+  @media (min-width: 1024px) {
+    .galeria-proyectos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card-img-top {
+      height: 220px;
+    }
+  }
+
+  
+/* ==========================================
+   SECCIÓN MI RECORRIDO (mi-recorrido.html)
+   ========================================== */
+   .seccion-recorrido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    min-height: 60vh;
+  }
+  
+  .recorrido-contenido {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.06);
+    max-width: 680px;
+    width: 100%;
+    padding: 2.2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .recorrido-contenido h2 {
+    color: var(--amarillo);
+    font-family: var(--fuente-titulo);
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  
+  .recorrido-bloque h3 {
+    color: var(--gris);
+    font-family: var(--fuente-titulo);
+    font-weight: 900;
+    font-size: 1.18rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recorrido-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .recorrido-lista li {
+    background: rgba(255,255,255,0.04);
+    color: var(--blanco);
+    border-left: 4px solid var(--amarillo);
+    padding: 1.2rem 1.2rem 1.2rem 1.7rem;
+    border-radius: 10px;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    line-height: 1.7;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: background 0.16s;
+  }
+  .recorrido-lista li:hover {
+    background: var(--amarillo);
+    color: var(--negro);
+  }
+  
+  @media (min-width: 768px) {
+    .recorrido-contenido {
+      padding: 2.7rem 2.8rem;
+    }
+    .recorrido-contenido h2 {
+      font-size: 2.4rem;
+    }
+    .recorrido-bloque {
+      gap: 2rem;
+    }
+  }
+  
+/* ==========================================
+   SECCIÓN CONTACTO (hablamos.html)
+   ========================================== */
+   .seccion-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    min-height: 60vh;
+  }
+  
+  .contacto-contenido {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.06);
+    max-width: 500px;
+    width: 100%;
+    padding: 2.2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contacto-contenido h2 {
+    color: var(--amarillo);
+    font-family: var(--fuente-titulo);
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  
+  .contacto-contenido p {
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 1.1rem;
+    font-family: var(--fuente-texto);
+    line-height: 1.5;
+  }
+  
+  .redes-contacto {
+    display: flex;
+    gap: 1.3rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  
+  .icono-red {
+    width: 36px;
+    height: 36px;
+    filter: grayscale(0.1) brightness(1.1);
+    transition: filter 0.16s;
+  }
+  .icono-red:hover {
+    filter: grayscale(0) brightness(1.4) drop-shadow(0 2px 8px var(--amarillo));
+  }
+  
+  .formulario-contacto .form-label {
+    color: var(--amarillo);
+    font-family: var(--fuente-titulo);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  .formulario-contacto .form-control {
+    background: var(--gris);
+    color: var(--negro);
+    border: 2px solid var(--amarillo);
+    border-radius: 9px;
+    margin-bottom: 0.7rem;
+  }
+  
+  .formulario-contacto .form-control:focus {
+    border-color: var(--negro);
+    box-shadow: 0 0 0 2px var(--amarillo)66;
+  }
+  
+  .formulario-contacto .btn {
+    font-family: var(--fuente-titulo);
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    border-radius: 9px;
+    transition: background 0.14s, color 0.14s;
+  }
+  
+  .formulario-contacto .btn:hover {
+    background: var(--negro);
+    color: var(--amarillo);
+    border: 1.5px solid var(--amarillo);
+  }
+  
+  @media (min-width: 768px) {
+    .contacto-contenido {
+      padding: 2.7rem 2.8rem;
+    }
+    .contacto-contenido h2 {
+      font-size: 2.4rem;
+    }
+  }
   

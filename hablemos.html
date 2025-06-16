@@ -3,16 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hablamos</title>
+  <title>DefeNR. | Portfolio</title>
+  <!-- ===========================
+       GOOGLE FONTS
+       =========================== -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400&display=swap" rel="stylesheet">
+  <!-- ===========================
+       BOOTSTRAP (para menú mobile y form)
+       =========================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- ===========================
+       TU CSS PERSONALIZADO
+       =========================== -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-  <!-- HEADER con logo y navegacion -->
+  <!-- =========================================
+       NAVBAR DESKTOP (visible solo en desktop)
+       ========================================= -->
   <header>
-    <nav>
-      <img src="img/Logo.webp" alt="Logo del sitio" width="100">
-      <ul>
+    <nav class="navbar-personalizado">
+      <div class="logo">
+        <!-- Logo de tu portfolio -->
+        <img src="img/Logo.webp" alt="Logo DefeNR">
+      </div>
+      <ul class="menu">
         <li><a href="index.html">Hola</a></li>
         <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
         <li><a href="proyectos.html">Proyectos</a></li>
@@ -22,43 +39,84 @@
     </nav>
   </header>
 
-  <!-- MAIN: Formulario de contacto + links a redes -->
-  <main>
-    <section>
-      <h1>Hablamos</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <!-- =========================================
+       NAVBAR MOBILE (Bootstrap)
+       ========================================= -->
+  <nav class="navbar navbar-dark bg-dark d-md-none">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/Logo.webp" alt="Logo" style="width: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarHamburguesa">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hola</a></li>
+          <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
+          <li class="nav-item"><a class="nav-link" href="hablamos.html">Hablamos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <!-- Lista de redes sociales -->
-      <ul>
-        <li><a href="https://www.linkedin.com/in/federiconunezrivero/q" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="#">WhatsApp</a></li>
-        <li><a href="https://www.behance.net/federiconu946a" target="_blank" rel="noopener noreferrer">Behance</a></li>
-      </ul>
+  <!-- =========================================
+       SECCIÓN PRINCIPAL 
+       ========================================= -->
+       <main class="seccion-contacto">
+        <!-- =========================================
+             Sección de contacto: redes + formulario
+             Estructura semántica, Bootstrap en el form
+             ========================================= -->
+        <section class="contacto-contenido">
+          <h2>¡Hablemos!</h2>
+          <p>
+            ¿Querés sumar creatividad a tu equipo o proponerme un proyecto?<br>
+            Escribime o contactame directo por mis redes:
+          </p>
+          <div class="redes-contacto">
+            <a href="https://www.linkedin.com/in/federiconunezrivero/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <img src="img/linkedin.svg" alt="LinkedIn" class="icono-red">
+            </a>
+            <a href="https://wa.me/549XXXXXXXXX" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+              <img src="img/whatsapp.svg" alt="WhatsApp" class="icono-red">
+            </a>
+            <a href="https://www.behance.net/federiconu946a" target="_blank" rel="noopener noreferrer" title="Behance">
+              <img src="img/behance.svg" alt="Behance" class="icono-red">
+            </a>
+          </div>
+          <!-- Formulario de contacto con Bootstrap -->
+          <form class="formulario-contacto mt-4">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="tucorreo@mail.com">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" placeholder="Contame tu idea..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100" style="background: var(--amarillo); color: var(--negro); font-weight: bold;">Enviar</button>
+          </form>
+        </section>
+      </main>
+      
 
-      <!-- Formulario de contacto -->
-      <form action="#" method="post">
-        <!-- Campo: Nombre -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <!-- Campo: Email -->
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-
-        <!-- Campo: Mensaje -->
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-
-        <!-- Boton de envio -->
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 - Portfolio personal</p>
+  <!-- =========================================
+       FOOTER GLOBAL
+       ========================================= -->
+  <footer class="footer">
+    <p>© 2025 DefeNR. Portfolio | Hecho con 💛 en Argentina</p>
   </footer>
 
+  <!-- =========================================
+       SCRIPTS BOOTSTRAP
+       ========================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
