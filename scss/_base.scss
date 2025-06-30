@@ -1,0 +1,84 @@
+// _base.scss
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: $negro;
+}
+
+body {
+  font-family: $fuente-texto;
+  background: $negro;
+  color: $blanco;
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+// ===== Reset general =====
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ===== Estilos base =====
+html {
+  scroll-behavior: smooth;
+  background: $negro;
+}
+
+body {
+  font-family: $fuente-texto;
+  background: $negro;
+  color: $blanco;
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+// ===== Tipografías base =====
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fuente-titulo;
+  color: $amarillo;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+p {
+  color: $blanco;
+  font-family: $fuente-texto;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+// ===== Enlaces =====
+a {
+  color: $amarillo;
+  text-decoration: none;
+  transition: color .18s;
+  &:hover {
+    color: $gris;
+  }
+}
+
+// ===== Listas =====
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: $blanco;
+  font-family: $fuente-texto;
+}
+
+// ===== Imágenes =====
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+}

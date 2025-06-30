@@ -1,0 +1,39 @@
+// ===== Mixins para media queries =====
+@mixin mobile {
+    @media (max-width: 767px) { @content; }
+  }
+  
+  @mixin tablet {
+    @media (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1024px) { @content; }
+  }
+  
+  // ===== Mixin para flex centrado =====
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // ===== Mixin para botón =====
+  @mixin boton-principal {
+    font-family: $fuente-titulo;
+    background: $amarillo;
+    color: $negro;
+    border: none;
+    border-radius: 9px;
+    padding: 0.6em 1.6em;
+    font-size: 1.1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    &:hover {
+      background: $negro;
+      color: $amarillo;
+      border: 1.5px solid $amarillo;
+    }
+  }
+  
