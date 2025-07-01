@@ -1,163 +1,254 @@
-// ===== CARDS DE PROYECTOS =====
-.proyecto-card {
-    background: rgba(255,255,255,0.04);
-    border-radius: $radio-borde;
-    overflow: hidden;
-    box-shadow: $sombra;
-    border: 1.5px solid $gris;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.16s, box-shadow 0.16s;
-  
-    &:hover {
-      transform: translateY(-7px) scale(1.03);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.16);
-      border-color: $amarillo;
-    }
-  
-    .card-img-top {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background: $gris;
-      border-bottom: 1.5px solid $gris;
-    }
-  
-    .card-body {
-      padding: 1.2rem 1.3rem 1.2rem 1.3rem;
-  
-      .card-title {
-        font-family: $fuente-titulo;
-        color: $amarillo;
-        font-size: 1.25rem;
-        margin-bottom: 0.7rem;
-      }
-  
-      .card-text {
-        font-family: $fuente-texto;
-        color: $blanco;
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-    }
-  }
-  
+// ===============================
+//        CARDS DE PROYECTOS
+// ===============================
+
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: 1fr; // Mobile: 1 columna
+
+  gap: 2rem;
+  margin-bottom: 2rem;
+
   @include tablet {
-    .proyecto-card .card-img-top {
-      height: 220px;
-    }
+    grid-template-columns: 1fr 1fr; // Tablet: 2 columnas
   }
-  
-  // ===== BOTÓN PRINCIPAL =====
-  .boton-principal {
-    @include boton-principal; 
-    margin: 0.6rem 0;
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr); // Desktop: 3 columnas
   }
-  
-  // ===== FORMULARIO DE CONTACTO =====
-  .formulario-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
+}
+
+.proyecto-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: $radio-borde;
+  overflow: hidden;
+  box-shadow: $sombra;
+  border: 1.5px solid $gris;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.16s, box-shadow 0.16s;
+
+  &:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.16);
+    border-color: $amarillo;
+  }
+
+  .card-img-top {
     width: 100%;
-  
-    .form-label {
-      color: $amarillo;
-      font-family: $fuente-titulo;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-  
-    .form-control {
-      background: $gris;
-      color: $negro;
-      border: 2px solid $amarillo;
-      border-radius: 9px;
-      margin-bottom: 0.7rem;
-      padding: 0.8em;
-      font-size: 1rem;
-      font-family: $fuente-texto;
-      transition: border-color 0.18s, box-shadow 0.18s;
-  
-      &:focus {
-        border-color: $negro;
-        box-shadow: 0 0 0 2px rgba($amarillo, 0.4);
-        outline: none;
-      }
-    }
-  
-    .btn {
-      @include boton-principal;
-      margin-top: 0.8rem;
-      width: fit-content;
-      align-self: flex-end;
-    }
+    height: 180px;
+    object-fit: cover;
+    background: $gris;
+    border-bottom: 1.5px solid $gris;
   }
-  
-  // ===== ICONOS DE REDES =====
-  .icono-red {
-    width: 36px;
-    height: 36px;
-    filter: grayscale(0.1) brightness(1.1);
-    transition: filter 0.16s;
-    &:hover {
-      filter: grayscale(0) brightness(1.4) drop-shadow(0 2px 8px $amarillo);
-    }
+  .card-title {
+    font-family: $fuente-titulo;
+    color: $amarillo;
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
   }
-  
-  // ======= BOTONES BASE, PRINCIPAL Y SECUNDARIO =======
+  .card-text {
+    font-family: $fuente-texto;
+    color: $blanco;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .boton-animado {
+    margin-top: 0.8rem;
+  }
+}
+
+// ===== Responsive Card Img =====
+@include tablet {
+  .proyecto-card .card-img-top {
+    height: 220px;
+  }
+}
+
+// ===============================
+//         BOTONES Y EXTEND
+// ===============================
 
 .boton-base {
-    padding: 0.6em 1.6em;
-    border-radius: 9px;
-    font-size: 1.1rem;
-    font-weight: 900;
-    cursor: pointer;
-    border: none;
-    transition: background 0.18s, color 0.18s;
-  }
-  
-  .boton-principal {
-    @extend .boton-base;
-    @include boton-principal; // Usa el mixin que ya tenés para botón principal
-  }
-  
-  .boton-secundario {
-    @extend .boton-base;
-    background: $gris;
-    color: $negro;
-    border: 1.5px solid $amarillo;
-  
-    &:hover {
-      background: $amarillo;
-      color: $negro;
-    }
-  }
-  
-  // ======= ANIMACIÓN PARA BOTÓN DESTACADO =======
-  @keyframes resaltar {
-    0% { box-shadow: 0 2px 8px $amarillo; }
-    50% { box-shadow: 0 10px 32px $amarillo; }
-    100% { box-shadow: 0 2px 8px $amarillo; }
-  }
-  
-  .boton-animado {
-    @extend .boton-base;
+  padding: 0.6em 1.6em;
+  border-radius: 9px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  transition: background 0.18s, color 0.18s;
+}
+
+.boton-principal {
+  @extend .boton-base;
+  @include boton-principal;
+  margin: 0.6rem 0;
+}
+
+.boton-secundario {
+  @extend .boton-base;
+  background: $gris;
+  color: $negro;
+  border: 1.5px solid $amarillo;
+
+  &:hover {
     background: $amarillo;
     color: $negro;
-    animation: resaltar 2s infinite;
   }
-  
-  // ======= CLASES DE FONDO AUTOMÁTICAS CON @each =======
-  $fondos: (
-    "amarillo": $amarillo,
-    "gris": $gris,
-    "negro": $negro
-  );
-  
-  @each $nombre, $color in $fondos {
-    .bg-#{$nombre} {
-      background-color: $color !important;
+}
+
+// ===== Botón Animado (con animación SASS) =====
+@keyframes resaltar {
+  0%   { box-shadow: 0 2px 8px $amarillo; }
+  50%  { box-shadow: 0 10px 32px $amarillo; }
+  100% { box-shadow: 0 2px 8px $amarillo; }
+}
+
+.boton-animado {
+  @extend .boton-base;
+  background: $amarillo;
+  color: $negro;
+  animation: resaltar 2s infinite;
+}
+
+// ===============================
+//     FORMULARIO DE CONTACTO
+// ===============================
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  width: 100%;
+
+  .form-label {
+    color: $amarillo;
+    font-family: $fuente-titulo;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .form-control {
+    background: $gris;
+    color: $negro;
+    border: 2px solid $amarillo;
+    border-radius: 9px;
+    margin-bottom: 0.7rem;
+    padding: 0.8em;
+    font-size: 1rem;
+    font-family: $fuente-texto;
+    transition: border-color 0.18s, box-shadow 0.18s;
+
+    &:focus {
+      border-color: $negro;
+      box-shadow: 0 0 0 2px rgba($amarillo, 0.4);
+      outline: none;
     }
   }
-  
+  .btn {
+    @include boton-principal;
+    margin-top: 0.8rem;
+    width: fit-content;
+    align-self: flex-end;
+  }
+}
+
+// ===============================
+//       ICONOS DE REDES
+// ===============================
+.redes-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; // o center si querés centrado
+  gap: 1.2rem;
+  margin-bottom: 1.7rem;
+  align-items: center;
+
+  @include mobile {
+    gap: 0.7rem;
+    justify-content: center; // en mobile, podés centrarlo
+  }
+} 
+.icono-red {
+  width: 36px;
+  height: 36px;
+  filter: grayscale(0.1) brightness(1.1);
+  transition: filter 0.16s;
+  &:hover {
+    filter: grayscale(0) brightness(1.4) drop-shadow(0 2px 8px $amarillo);
+  }
+}
+
+// ===============================
+//     CLASES DE FONDO AUTOMÁTICO
+// ===============================
+
+$fondos: (
+  "amarillo": $amarillo,
+  "gris": $gris,
+  "negro": $negro
+);
+
+@each $nombre, $color in $fondos {
+  .bg-#{$nombre} {
+    background-color: $color !important;
+  }
+}
+
+// =========== SECCIÓN HOLA / BIENVENIDA =============
+.seccion-hola {
+  min-height: calc(100vh - 130px); // Ajustá según altura del navbar
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $negro;
+  padding: 0;
+
+  .bienvenida {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.6rem;
+    }
+  }
+
+  .perfil-img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 44px 0 rgba(0,0,0,0.22);
+
+    @include mobile {
+      width: 190px;
+      height: 190px;
+      margin: 0 auto;
+    }
+  }
+
+  .texto {
+    h1 {
+      color: $blanco;
+      font-size: 3rem;
+      font-family: $fuente-titulo;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      @include mobile {
+        font-size: 2.1rem;
+      }
+    }
+    p {
+      color: $blanco;
+      font-size: 1.3rem;
+      font-family: $fuente-texto;
+      margin-top: 0.7rem;
+      @include mobile {
+        font-size: 1.05rem;
+      }
+    }
+  }
+}

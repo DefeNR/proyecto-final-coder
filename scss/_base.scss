@@ -1,4 +1,7 @@
-// _base.scss
+// ===========================
+//  BASE & RESET GENERAL
+// ===========================
+
 *,
 *::before,
 *::after {
@@ -6,6 +9,10 @@
   margin: 0;
   padding: 0;
 }
+
+// ===========================
+//  HTML & BODY
+// ===========================
 
 html {
   scroll-behavior: smooth;
@@ -20,30 +27,17 @@ body {
   line-height: 1.7;
 }
 
-// ===== Reset general =====
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-// ===== Estilos base =====
-html {
-  scroll-behavior: smooth;
-  background: $negro;
-}
+// ===========================
+//  TIPOGRAFÍAS BASE
+// ===========================
 
-body {
-  font-family: $fuente-texto;
-  background: $negro;
-  color: $blanco;
-  min-height: 100vh;
-  line-height: 1.7;
-}
-
-// ===== Tipografías base =====
 h1, h2, h3, h4, h5, h6 {
   font-family: $fuente-titulo;
   color: $amarillo;
@@ -58,7 +52,10 @@ p {
   line-height: 1.7;
 }
 
-// ===== Enlaces =====
+// ===========================
+//  ENLACES
+// ===========================
+
 a {
   color: $amarillo;
   text-decoration: none;
@@ -68,7 +65,10 @@ a {
   }
 }
 
-// ===== Listas =====
+// ===========================
+//  LISTAS
+// ===========================
+
 ul, ol {
   margin-left: 2rem;
   margin-bottom: 1rem;
@@ -76,7 +76,10 @@ ul, ol {
   font-family: $fuente-texto;
 }
 
-// ===== Imágenes =====
+// ===========================
+//  IMÁGENES
+// ===========================
+
 img {
   max-width: 100%;
   display: block;

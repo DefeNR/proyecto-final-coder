@@ -19,94 +19,91 @@
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-
+<!-- =========================================
+     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+     ========================================= -->
+     <header>
+      <nav class="navbar-desktop">
+        <div class="logo">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/Logo.webp" alt="Logo DefeNR">
+          </a>
+        </div>
+        <ul class="menu">
+          <li><a href="../index.html">Hola</a></li>
+          <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li><a href="proyectos.html" >Proyectos</a></li>
+          <li><a href="mi-recorrido.html" class="activo">Mi recorrido</a></li>
+          <li><a href="hablemos.html">Hablamos</a></li>
+        </ul>
+      </nav>
+    </header>
+    
   <!-- =========================================
-       NAVBAR DESKTOP (visible solo en desktop)
-       ========================================= -->
-  <header>
-    <nav class="navbar-personalizado">
-      <div class="logo">
-        <!-- Logo de tu portfolio -->
-        <img src="../img/Logo.webp" alt="Logo DefeNR">
+   NAVBAR MOBILE (solo mobile, ocultar en desktop)
+   ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarHamburguesa">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
+            <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+            <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link activo"  href="mi-recorrido.html">Mi recorrido</a></li>
+            <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="menu">
-        <li><a href="../index.html">Hola</a></li>
-        <li><a href="../secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
-        <li><a href="../secciones/proyectos.html">Proyectos</a></li>
-        <li><a href="mi-recorrido.html">Mi recorrido</a></li>
-        <li><a href="../secciones/hablemos.html">Hablemos</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  </nav>
+ 
+ 
   <!-- =========================================
-       NAVBAR MOBILE (Bootstrap)
+       SECCIÓN RECORRIDO: EDUCACIÓN + EXPERIENCIA
        ========================================= -->
-  <nav class="navbar navbar-dark bg-dark d-md-none">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarHamburguesa">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
-          <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
-          <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablemos</a></li>
+  <main>
+    <section class="recorrido-contenido">
+      <div class="contenedor">
+      <h2>Mi recorrido</h2>
+      <!-- EDUCACIÓN -->
+      <div class="recorrido-bloque">
+        <h3>Formación</h3>
+        <ul class="recorrido-lista">
+          <li>
+            <strong>Licenciatura en Diseño Multimedial</strong> — Universidad de [Nombre] (Año de inicio – Año de fin)
+          </li>
+          <li>
+            <strong>Curso UX/UI</strong> — Coderhouse (2025)
+          </li>
+          <li>
+            <strong>Curso de Marketing Digital</strong> — Domestika (2024)
+          </li>
+          <!-- Agregá más estudios si querés -->
+        </ul>
+      </div>
+      <!-- EXPERIENCIA -->
+      <div class="recorrido-bloque">
+        <h3>Experiencia Laboral</h3>
+        <ul class="recorrido-lista">
+          <li>
+            <strong>Visual Designer Sr.</strong> — Agencia Creativa [Nombre] (2023 – actual)<br>
+            Branding, campañas digitales, diseño UI, coordinación de equipos.
+          </li>
+          <li>
+            <strong>Marketing Designer</strong> — Empresa Tech [Nombre] (2021 – 2023)<br>
+            Diseño de piezas publicitarias, social media, soporte UX.
+          </li>
+          <!-- Sumá más experiencias a gusto -->
         </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- =========================================
-       SECCIÓN PRINCIPAL 
-       ========================================= -->
-  
-   <!-- =====================================
-             Sección Recorrido: educación + experiencia
-             Estructura semántica y responsive
-             ===================================== -->     
-       <main class="seccion-recorrido">
-        <section class="recorrido-contenido">
-          <h2>Mi recorrido</h2>
-          <!-- EDUCACIÓN -->
-          <div class="recorrido-bloque">
-            <h3>Formación</h3>
-            <ul class="recorrido-lista">
-              <li>
-                <strong>Licenciatura en Diseño Multimedial</strong> — Universidad de [Nombre] (Año de inicio – Año de fin)
-              </li>
-              <li>
-                <strong>Curso UX/UI</strong> — Coderhouse (2025)
-              </li>
-              <li>
-                <strong>Curso de Marketing Digital</strong> — Domestika (2024)
-              </li>
-              <!-- Agregá más estudios si querés -->
-            </ul>
-          </div>
-          <!-- EXPERIENCIA -->
-          <div class="recorrido-bloque">
-            <h3>Experiencia Laboral</h3>
-            <ul class="recorrido-lista">
-              <li>
-                <strong>Visual Designer Sr.</strong> — Agencia Creativa [Nombre] (2023 – actual)<br>
-                Branding, campañas digitales, diseño UI, coordinación de equipos.
-              </li>
-              <li>
-                <strong>Marketing Designer</strong> — Empresa Tech [Nombre] (2021 – 2023)<br>
-                Diseño de piezas publicitarias, social media, soporte UX.
-              </li>
-              <!-- Sumá más experiencias a gusto -->
-            </ul>
-          </div>
-        </section>
-      </main>
-      
+    </section>
+  </main>
 
   <!-- =========================================
        FOOTER GLOBAL
@@ -121,3 +118,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

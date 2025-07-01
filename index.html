@@ -20,65 +20,64 @@
 </head>
 <body>
 
-  <!-- =========================================
-       NAVBAR DESKTOP (visible solo en desktop)
-       ========================================= -->
-  <header>
-    <nav class="navbar-personalizado">
-      <div class="logo">
-        <!-- Logo de tu portfolio -->
-        <img src="img/Logo.webp" alt="Logo DefeNR">
-      </div>
-      <ul class="menu">
-        <li><a href="index.html">Hola</a></li>
-        <li><a href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
-        <li><a href="secciones/proyectos.html">Proyectos</a></li>
-        <li><a href="secciones/mi-recorrido.html">Mi recorrido</a></li>
-        <li><a href="secciones/hablemos.html">Hablemos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- =========================================
-       NAVBAR MOBILE (Bootstrap)
-       ========================================= -->
-  <nav class="navbar navbar-dark bg-dark d-md-none">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/Logo.webp" alt="Logo" style="width: 70px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarHamburguesa">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Hola</a></li>
-          <li class="nav-item"><a class="nav-link" href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
-          <li class="nav-item"><a class="nav-link" href="secciones/proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="secciones/mi-recorrido.html">Mi recorrido</a></li>
-          <li class="nav-item"><a class="nav-link" href="secciones/hablemos.html">Hablamos</a></li>
+<!-- =========================================
+     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+     ========================================= -->
+     <header>
+      <nav class="navbar-desktop">
+        <div class="logo">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/Logo.webp" alt="Logo DefeNR">
+          </a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html" class="activo">Hola</a></li>
+          <li><a href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li><a href="secciones/proyectos.html">Proyectos</a></li>
+          <li><a href="secciones/mi-recorrido.html">Mi recorrido</a></li>
+          <li><a href="secciones/hablemos.html">Hablamos</a></li>
         </ul>
+      </nav>
+    </header>
+    
+  <!-- =========================================
+   NAVBAR MOBILE (solo mobile, ocultar en desktop)
+   ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/Logo.webp" alt="Logo" style="width: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarHamburguesa">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link activo" href="index.html">Hola</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/proyectos.html">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/mi-recorrido.html">Mi recorrido</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/hablemos.html">Hablamos</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
   </nav>
+    
 
   <!-- =========================================
        SECCIÓN PRINCIPAL 
        ========================================= -->
-  <main>
-    <main class="seccion-hola">
-      <!-- =======================
-           FOTO DE PERFIL Y TEXTO
-           ======================= -->
-      <section class="bienvenida">
-        <img src="img/perfil.webp" alt="Foto de DefeNR" class="perfil-img">
-        <div class="texto">
-          <h1>¡Hola! Soy Defe.</h1>
-          <p>Visual Designer con foco en UX/UI. Amante de las ideas simples y los desafíos grandes.</p>
-        </div>
-      </section>
-    </main>
-
+  <main class="seccion-hola">
+    <!-- =======================
+         FOTO DE PERFIL Y TEXTO
+         ======================= -->
+    <section class="bienvenida">
+      <img src="img/perfil.webp" alt="Foto de DefeNR" class="perfil-img">
+      <div class="texto">
+        <h1>¡Hola! Soy Defe.</h1>
+        <p>Visual Designer con foco en UX/UI. Amante de las ideas simples y los desafíos grandes.</p>
+      </div>
+    </section>
   </main>
 
   <!-- =========================================

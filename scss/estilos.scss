@@ -1,5 +1,19 @@
+// ===========================
+//   ARCHIVO PRINCIPAL SASS
+// ===========================
+
+// 1. Variables globales
 @import 'variables';
+
+// 2. Mixins
 @import 'mixins';
+
+// 3. Reset y estilos base (body, tipografía, etc.)
 @import 'base';
+
+// 4. Layout general (header, nav, main, footer, responsive layout)
 @import 'layout';
+
+// 5. Componentes reutilizables (cards, botones, formularios, iconos, helpers)
 @import 'components';
+

@@ -20,87 +20,86 @@
 </head>
 <body>
 
-  <!-- =========================================
-       NAVBAR DESKTOP (visible solo en desktop)
-       ========================================= -->
-  <header>
-    <nav class="navbar-personalizado">
-      <div class="logo">
-        <!-- Logo de tu portfolio -->
-        <img src="../img/Logo.webp" alt="Logo DefeNR">
-      </div>
-      <ul class="menu">
-        <li><a href="../index.html">Hola</a></li>
-        <li><a href="../secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="../secciones/mi-recorrido.html">Mi recorrido</a></li>
-        <li><a href="../secciones/hablemos.html">Hablemos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- =========================================
-       NAVBAR MOBILE (Bootstrap)
-       ========================================= -->
-  <nav class="navbar navbar-dark bg-dark d-md-none">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarHamburguesa">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
-          <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
-          <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablemos</a></li>
+<!-- =========================================
+     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+     ========================================= -->
+     <header>
+      <nav class="navbar-desktop">
+        <div class="logo">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/Logo.webp" alt="Logo DefeNR">
+          </a>
+        </div>
+        <ul class="menu">
+          <li><a href="../index.html">Hola</a></li>
+          <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li><a href="proyectos.html" class="activo">Proyectos</a></li>
+          <li><a href="mi-recorrido.html">Mi recorrido</a></li>
+          <li><a href="hablemos.html">Hablamos</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
-
+      </nav>
+    </header>
+    
   <!-- =========================================
-       SECCIÓN PRINCIPAL 
+   NAVBAR MOBILE (solo mobile, ocultar en desktop)
+   ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarHamburguesa">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
+            <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+            <li class="nav-item"><a class="nav-link activo" href="proyectos.html">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
+            <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+    
+ 
+  <!-- =========================================
+       SECCIÓN PRINCIPAL: GALERÍA DE PROYECTOS
        ========================================= -->
-   <main class="seccion-proyectos">
-        <!-- =====================================
-             Galería de proyectos con cards
-             ===================================== -->
-        <section class="galeria-proyectos">
-          <!-- Card Proyecto 1 -->
-          <article class="card proyecto-card">
-            <img src="../img/proyectos/proyecto1.jpg" alt="Proyecto 1" class="card-img-top">
-            <div class="proyecto-card bg-amarillo"></div>
-              <h3 class="card-title">Proyecto 1</h3>
-              <p class="card-text">Descripción breve del proyecto o su categoría.</p>
-              <a href="#" class="boton-animado">¡Ver más!</a>
-            </div>
-          </article>
-          <!-- Card Proyecto 2 -->
-          <article class="card proyecto-card">
-            <img src="../img/proyectos/proyecto2.jpg" alt="Proyecto 2" class="card-img-top">
-            <ddiv class="proyecto-card bg-amarillo">
-              <h3 class="card-title">Proyecto 2</h3>
-              <p class="card-text">Otra descripción o tipo de trabajo.</p>
-              <a href="#" class="boton-animado">¡Ver más!</a>
-            </div>
-          </article>
-          <!-- Card Proyecto 3 -->
-          <article class="card proyecto-card">
-            <img src="../img/proyectos/proyecto3.jpg" alt="Proyecto 3" class="card-img-top">
-            <div class="proyecto-card bg-amarillo"></div>
-              <h3 class="card-title">Proyecto 3</h3>
-              <p class="card-text">Breve texto del proyecto.</p>
-              <a href="#" class="boton-animado">¡Ver más!</a>
-            </div>
-          </article>
-          <!-- Agregá más cards si querés -->
-        </section>
+  <main>
+    <div class="contenedor">
+    <section class="galeria-proyectos">
+      <!-- ========== Card Proyecto 1 ========== -->
+      <article class="card proyecto-card bg-negro">
+        <img src="../img/proyectos/proyecto1.jpg" alt="Proyecto 1" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title">Proyecto 1</h3>
+          <p class="card-text">Descripción breve del proyecto.</p>
+          <a href="#" class="boton-animado">¡Ver más!</a>
+        </div>
+      </article>
+      <!-- ========== Card Proyecto 2 ========== -->
+      <article class="card proyecto-card bg-negro">
+        <img src="../img/proyectos/proyecto2.jpg" alt="Proyecto 2" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title">Proyecto 2</h3>
+          <p class="card-text">Otra descripción o tipo de trabajo.</p>
+          <a href="#" class="boton-animado">¡Ver más!</a>
+        </div>
+      </article>
+      <!-- ========== Card Proyecto 3 ========== -->
+      <article class="card proyecto-card bg-negro">
+        <img src="../img/proyectos/proyecto3.jpg" alt="Proyecto 3" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title">Proyecto 3</h3>
+          <p class="card-text">Breve texto del proyecto.</p>
+          <a href="#" class="boton-animado">¡Ver más!</a>
+        </div>
+      </article>
+    </section>
+  </div>
   </main>
-      
 
   <!-- =========================================
        FOOTER GLOBAL

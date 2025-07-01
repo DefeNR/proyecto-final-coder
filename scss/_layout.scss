@@ -1,107 +1,187 @@
-// ===== HEADER y NAVBAR =====
+// ================================
+//          LAYOUT GENERAL
+// ================================
+
+// ===== HEADER Y NAVBAR DESKTOP =====
 header {
-    width: 100%;
-    background: $blanco;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    padding: 0.6rem 0;
-  
-    nav.navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      @include flex-center;
-      justify-content: space-between;
-      padding: 0 2rem;
-  
-      .logo img {
-        width: 70px;
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-  
-      ul.menu {
-        display: flex;
-        gap: 1.7rem;
-        list-style: none;
-        font-family: $fuente-titulo;
-  
-        li {
-          a {
-            text-decoration: none;
-            color: $negro;
-            font-size: 1.1rem;
-            font-weight: 900;
-            padding: 0.45em 1em;
-            border-radius: 8px;
-            transition: background 0.14s, color 0.14s;
-  
-            &:hover,
-            &.active {
-              background: $amarillo;
-              color: $negro;
-            }
-          }
-        }
-      }
-  
-      // Menú hamburguesa 
-      .menu-hamburguesa {
-        display: none;
+  width: 100%;
+  padding: 0rem ;
+}
+// ======= NAVBAR DESKTOP =======
+.navbar-desktop {
+  width: 100vw;
+  background: $amarillo;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3vw 1rem 3vw;
+
+  .logo img {
+    width: 100px;
+    height: auto;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    gap: 2.5vw;
+    list-style: none;
+    align-items: center;
+    li a {
+      font-family: $fuente-titulo;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: $negro;
+      background: transparent;
+      border-radius: 12px;
+      padding: 0.35rem 1rem;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+      &.activo, &:hover {
+        
+        color: $blanco;
       }
     }
   }
-  
-  // Responsive NAVBAR 
+  // Ocultá el navbar-desktop en mobile:
   @include mobile {
-    header nav.navbar {
-      padding: 0 1rem;
-      ul.menu {
-        display: none;
-      }
-      .menu-hamburguesa {
-        display: block;
-        cursor: pointer;
-        font-size: 2rem;
-        color: $negro;
+    display: none;
+  }
+}
+
+// ======= NAVBAR MOBILE =======
+.navbar-mobile {
+  background: $amarillo !important;
+  padding: 0.8rem 0.6rem;
+  .navbar-brand img {
+    width: 55px;
+  }
+  .navbar-toggler {
+    border-radius: 14px;
+    border: 0px solid $negro;
+    background: $amarillo;
+    color: $negro;
+    &:focus {
+      box-shadow: 0 0 0 0px $amarillo;
+    }
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%230F0F0F' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(15,15,15,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .navbar-nav {
+    .nav-link {
+      font-family: $fuente-titulo;
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: $negro !important;
+      background: transparent;
+      border-radius: 8px;
+      margin: 0rem 0;
+      padding: 0.5rem 0.9rem;
+      border-radius: 6px;
+      &.activo, &:hover {
+        color: $blanco !important;
       }
     }
   }
-  
-  // ===== MAIN =====
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: $espaciado-seccion 1rem;
+  // Ocultá la navbar-mobile en desktop:
+  @include desktop {
+    display: none !important;
   }
-  
-  // ===== FOOTER =====
-  footer {
-    width: 100%;
-    background: $negro;
-    color: $blanco;
-    text-align: center;
-    padding: 1.5rem 0 1.2rem 0;
-    margin-top: 3rem;
-    border-top: 2px solid $amarillo;
-  
-    .redes-footer {
-      margin-bottom: 0.9rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      a {
-        color: $amarillo;
-        font-size: 1.8rem;
-        transition: color 0.18s;
-        &:hover {
-          color: $blanco;
-        }
+}
+
+// ======= ESPACIADO PRINCIPAL =======
+main.seccion-hola {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .bienvenida {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      gap: 2.2rem;
+    }
+    .perfil-img {
+      width: auto;
+      border-radius: 50%;
+      @include mobile {
+        width: auto;
+        margin: 0 auto;
       }
     }
-  
-    p {
-      color: $gris;
-      font-size: 1rem;
+    .texto {
+      h1 {
+        font-size: 3rem;
+        color: $blanco;
+        margin-bottom: 1.1rem;
+      }
+      p {
+        font-size: 1.5rem;
+        color: $blanco;
+        margin: 0;
+      }
     }
   }
-  
+}
+
+// ===== Contenedor general =====
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem; // Arriba, derecha, abajo, izquierda
+  @include tablet {
+    padding: 2rem 2.5rem;
+  }
+  @include mobile {
+    padding: 1.2rem 0.7rem;
+  }
+}
+
+
+// ====== FOOTER ======
+footer {
+  width: 100%;
+  background: $negro;
+  color: $blanco;
+  text-align: center;
+  padding: 1.5rem 0 1.2rem 0;
+  margin-top: 3rem;
+  border-top: 2px solid $amarillo;
+
+  .redes-footer {
+    margin-bottom: 0.9rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    a {
+      color: $amarillo;
+      font-size: 1.8rem;
+      transition: color 0.18s;
+      &:hover {
+        color: $blanco;
+      }
+    }
+  }
+  p {
+    color: $gris;
+    font-size: 1rem;
+  }
+}
+
+// ====== RESPONSIVE NAVBAR ======
+@include mobile {
+  header .navbar-personalizado {
+    display: none;
+  }
+  .navbar.navbar-dark {
+    display: block;
+  }
+}
+@include desktop {
+  .navbar.navbar-dark {
+    display: none;
+  }
+}
