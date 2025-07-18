@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DefeNR. | Portfolio</title>
+
+  <!-- ========== SEO PRINCIPAL ========== -->
+  <title>Proyectos | DefeNR | Visual Designer & UX/UI</title>
+  <meta name="description" content="Mirá los mejores proyectos de DefeNR: branding, productos digitales, UX/UI y campañas creativas. Descubrí trabajos de diseño y creatividad digital.">
+  <meta name="keywords" content="Proyectos, Portfolio, Visual Designer, UX/UI, Branding, Diseño, Creatividad, Campañas">
+  <meta name="author" content="Federico Núñez Rivero">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========== SEO SOCIAL (Open Graph) ========== -->
+  <meta property="og:title" content="Proyectos | DefeNR | Visual Designer & UX/UI">
+  <meta property="og:description" content="Mirá los mejores proyectos de DefeNR: branding, UX/UI, creatividad digital y diseño integral.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://defenr.github.io/proyecto-final-coder/img/proyectos/proyecto1.jpg">
+  <meta property="og:url" content="https://defenr.github.io/proyecto-final-coder/secciones/proyectos.html">
+
+  <!-- ========== FAVICON ========== -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
   <!-- ===========================
        GOOGLE FONTS
        =========================== -->
@@ -20,85 +37,90 @@
 </head>
 <body>
 
-<!-- =========================================
-     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
-     ========================================= -->
-     <header>
-      <nav class="navbar-desktop">
-        <div class="logo">
-          <a class="navbar-brand" href="../index.html">
-            <img src="../img/Logo.webp" alt="Logo DefeNR">
-          </a>
-        </div>
-        <ul class="menu">
-          <li><a href="../index.html">Hola</a></li>
-          <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-          <li><a href="proyectos.html" class="activo">Proyectos</a></li>
-          <li><a href="mi-recorrido.html">Mi recorrido</a></li>
-          <li><a href="hablemos.html">Hablamos</a></li>
-        </ul>
-      </nav>
-    </header>
-    
   <!-- =========================================
-   NAVBAR MOBILE (solo mobile, ocultar en desktop)
-   ========================================= -->
-  <nav class="navbar navbar-mobile d-md-none">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
+       NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+       ========================================= -->
+  <header>
+    <nav class="navbar-desktop" aria-label="Menú principal">
+      <div class="logo">
+        <a class="navbar-brand" href="../index.html" aria-label="Inicio">
+          <img src="../img/Logo.webp" alt="Logo DefeNR, ir al inicio">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarHamburguesa">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
-            <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-            <li class="nav-item"><a class="nav-link activo" href="proyectos.html">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
-            <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
-          </ul>
-        </div>
       </div>
+      <ul class="menu">
+        <li><a href="../index.html">Hola</a></li>
+        <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+        <li><a href="proyectos.html" class="activo" aria-current="page">Proyectos</a></li>
+        <li><a href="mi-recorrido.html">Mi recorrido</a></li>
+        <li><a href="hablemos.html">Hablemos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- =========================================
+       NAVBAR MOBILE (solo mobile, ocultar en desktop)
+       ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none" aria-label="Menú móvil">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html" aria-label="Inicio">
+        <img src="../img/Logo.webp" alt="Logo DefeNR, ir al inicio" style="width: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarHamburguesa">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
+          <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li class="nav-item"><a class="nav-link activo" href="proyectos.html" aria-current="page">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
+          <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablemos</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-    
- 
+
   <!-- =========================================
        SECCIÓN PRINCIPAL: GALERÍA DE PROYECTOS
        ========================================= -->
   <main>
     <div class="contenedor">
-    <section class="galeria-proyectos">
-      <!-- ========== Card Proyecto 1 ========== -->
-      <article class="card proyecto-card bg-negro">
-        <img src="../img/proyectos/proyecto1.jpg" alt="Proyecto 1" class="card-img-top">
-        <div class="card-body">
-          <h3 class="card-title">Proyecto 1</h3>
-          <p class="card-text">Descripción breve del proyecto.</p>
-          <a href="#" class="boton-animado">¡Ver más!</a>
-        </div>
-      </article>
-      <!-- ========== Card Proyecto 2 ========== -->
-      <article class="card proyecto-card bg-negro">
-        <img src="../img/proyectos/proyecto2.jpg" alt="Proyecto 2" class="card-img-top">
-        <div class="card-body">
-          <h3 class="card-title">Proyecto 2</h3>
-          <p class="card-text">Otra descripción o tipo de trabajo.</p>
-          <a href="#" class="boton-animado">¡Ver más!</a>
-        </div>
-      </article>
-      <!-- ========== Card Proyecto 3 ========== -->
-      <article class="card proyecto-card bg-negro">
-        <img src="../img/proyectos/proyecto3.jpg" alt="Proyecto 3" class="card-img-top">
-        <div class="card-body">
-          <h3 class="card-title">Proyecto 3</h3>
-          <p class="card-text">Breve texto del proyecto.</p>
-          <a href="#" class="boton-animado">¡Ver más!</a>
-        </div>
-      </article>
-    </section>
-  </div>
+      <section class="galeria-proyectos" aria-label="Galería de proyectos">
+        <!-- ========== Card Proyecto 1 ========== -->
+        <article class="card proyecto-card bg-negro">
+          <img src="../img/proyectos/proyecto1.jpg" alt="Mockup para Surprise! caso de estudio sobre UX Writing" class="card-img-top">
+          <div class="card-body">
+            <h1 class="card-title" style="font-size: 1.5rem;">Surprise! – UX Writing - Caso de estudio</h1>
+            <p class="card-text">
+              Desarrollo del contenido para un producto digital que brinda la posibilidad de regalar y acertar siempre. Research, benchmark, contenido y flujos de usuario.
+            </p>
+            <a href="#" class="boton-animado" aria-label="Ver más sobre Surprise!">¡Ver más!</a>
+          </div>
+        </article>
+        <!-- ========== Card Proyecto 2 ========== -->
+        <article class="card proyecto-card bg-negro">
+          <img src="../img/proyectos/proyecto2.jpg" alt="Dashboard UX/UI para app de eventos culturales, diseño de interfaz mobile" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title" style="font-size: 1.5rem;">App Voy – UX/UI</h2>
+            <p class="card-text">
+              Diseño de experiencia de usuario y UI mobile para aplicación para buscar eventos, estés donde estés. Wireframes, prototipado y testeo con usuarios.
+            </p>
+            <a href="#" class="boton-animado" aria-label="Ver más sobre App Voy">¡Ver más!</a>
+          </div>
+        </article>
+        <!-- ========== Card Proyecto 3 ========== -->
+        <article class="card proyecto-card bg-negro">
+          <img src="../img/proyectos/proyecto3.jpg" alt="Campaña creativa para marca de indumentaria urbana" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title" style="font-size: 1.5rem;">"De regalos meh a regalos oh!" – Campaña Creativa</h2>
+            <p class="card-text">
+              Idea y ejecución de campaña de fin de año para oh! Gift Card. Creatividad visual, redes sociales y diseño de piezas digitales.
+            </p>
+            <a href="#" class="boton-animado" aria-label="Ver más sobre Campaña oh! Gift Card">¡Ver más!</a>
+          </div>
+        </article>
+      </section>
+    </div>
   </main>
 
   <!-- =========================================

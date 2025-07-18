@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DefeNR. | Portfolio</title>
+
+  <!-- ========== SEO PRINCIPAL ========== -->
+  <title>Recorrido | DefeNR | Formación y Experiencia</title>
+  <meta name="description" content="Conocé la formación académica y la experiencia laboral de DefeNR, Visual Designer y UX/UI. Descubrí su trayectoria en diseño, marketing y creatividad.">
+  <meta name="keywords" content="Recorrido, Formación, Experiencia, Visual Designer, UX/UI, Educación, Trabajo, Portfolio">
+  <meta name="author" content="Federico Núñez Rivero">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========== SEO SOCIAL (Open Graph) ========== -->
+  <meta property="og:title" content="Recorrido | DefeNR | Formación y Experiencia">
+  <meta property="og:description" content="Formación académica y experiencia laboral de DefeNR, diseñador multimedial y UX/UI.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://defenr.github.io/proyecto-final-coder/img/perfil.webp">
+  <meta property="og:url" content="https://defenr.github.io/proyecto-final-coder/secciones/mi-recorrido.html">
+
+  <!-- ========== FAVICON ========== -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
   <!-- ===========================
        GOOGLE FONTS
        =========================== -->
@@ -19,89 +36,88 @@
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-<!-- =========================================
-     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
-     ========================================= -->
-     <header>
-      <nav class="navbar-desktop">
-        <div class="logo">
-          <a class="navbar-brand" href="../index.html">
-            <img src="../img/Logo.webp" alt="Logo DefeNR">
-          </a>
-        </div>
-        <ul class="menu">
-          <li><a href="../index.html">Hola</a></li>
-          <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-          <li><a href="proyectos.html" >Proyectos</a></li>
-          <li><a href="mi-recorrido.html" class="activo">Mi recorrido</a></li>
-          <li><a href="hablemos.html">Hablamos</a></li>
-        </ul>
-      </nav>
-    </header>
-    
   <!-- =========================================
-   NAVBAR MOBILE (solo mobile, ocultar en desktop)
-   ========================================= -->
-  <nav class="navbar navbar-mobile d-md-none">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
+       NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+       ========================================= -->
+  <header>
+    <nav class="navbar-desktop" aria-label="Menú principal">
+      <div class="logo">
+        <a class="navbar-brand" href="../index.html" aria-label="Inicio">
+          <img src="../img/Logo.webp" alt="Logo DefeNR, ir al inicio">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarHamburguesa">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
-            <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-            <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link activo"  href="mi-recorrido.html">Mi recorrido</a></li>
-            <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
-          </ul>
-        </div>
       </div>
+      <ul class="menu">
+        <li><a href="../index.html">Hola</a></li>
+        <li><a href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="mi-recorrido.html" class="activo" aria-current="page">Mi recorrido</a></li>
+        <li><a href="hablemos.html">Hablamos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- =========================================
+       NAVBAR MOBILE (solo mobile, ocultar en desktop)
+       ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none" aria-label="Menú móvil">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html" aria-label="Inicio">
+        <img src="../img/Logo.webp" alt="Logo DefeNR, ir al inicio" style="width: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarHamburguesa">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
+          <li class="nav-item"><a class="nav-link" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link activo" href="mi-recorrido.html" aria-current="page">Mi recorrido</a></li>
+          <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
- 
  
   <!-- =========================================
        SECCIÓN RECORRIDO: EDUCACIÓN + EXPERIENCIA
        ========================================= -->
   <main>
-    <section class="recorrido-contenido">
+    <section class="recorrido-contenido" aria-label="Formación y experiencia">
       <div class="contenedor">
-      <h2>Mi recorrido</h2>
-      <!-- EDUCACIÓN -->
-      <div class="recorrido-bloque">
-        <h3>Formación</h3>
-        <ul class="recorrido-lista">
-          <li>
-            <strong>Licenciatura en Diseño Multimedial</strong> — Universidad de [Nombre] (Año de inicio – Año de fin)
-          </li>
-          <li>
-            <strong>Curso UX/UI</strong> — Coderhouse (2025)
-          </li>
-          <li>
-            <strong>Curso de Marketing Digital</strong> — Domestika (2024)
-          </li>
-          <!-- Agregá más estudios si querés -->
-        </ul>
+        <h1>Mi recorrido</h1>
+        <!-- EDUCACIÓN -->
+        <div class="recorrido-bloque">
+          <h2>Formación</h2>
+          <ul class="recorrido-lista">
+            <li>
+              <strong>Licenciatura en Diseño Multimedial</strong> — Escuela Da Vinci (2010 – 2014)
+            </li>
+            <li>
+              <strong>Curso UX/UI Designer</strong> — Coderhouse (febrero 2024 - mayo 2024)
+            </li>
+            <li>
+              <strong>Curso UX Writing</strong> — Coderhouse (junio 2024 - julio 2024)
+            </li>
+            <!-- Agregá más estudios si querés -->
+          </ul>
+        </div>
+        <!-- EXPERIENCIA -->
+        <div class="recorrido-bloque">
+          <h2>Experiencia Laboral</h2>
+          <ul class="recorrido-lista">
+            <li>
+              <strong>Visual Designer Sr.</strong> — Oh! Gift Card (2024 – presente)<br>
+              Branding, campañas digitales, diseño UI, coordinación de equipos.
+            </li>
+            <li>
+              <strong>Marketing Designer</strong> —  Phinx  (2021 – 2024)<br>
+              Diseño de piezas publicitarias, social media, soporte UX.
+            </li>
+            <!-- Sumá más experiencias a gusto -->
+          </ul>
+        </div>
       </div>
-      <!-- EXPERIENCIA -->
-      <div class="recorrido-bloque">
-        <h3>Experiencia Laboral</h3>
-        <ul class="recorrido-lista">
-          <li>
-            <strong>Visual Designer Sr.</strong> — Agencia Creativa [Nombre] (2023 – actual)<br>
-            Branding, campañas digitales, diseño UI, coordinación de equipos.
-          </li>
-          <li>
-            <strong>Marketing Designer</strong> — Empresa Tech [Nombre] (2021 – 2023)<br>
-            Diseño de piezas publicitarias, social media, soporte UX.
-          </li>
-          <!-- Sumá más experiencias a gusto -->
-        </ul>
-      </div>
-    </div>
     </section>
   </main>
 
@@ -118,4 +134,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

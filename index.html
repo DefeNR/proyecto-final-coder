@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DefeNR. | Portfolio</title>
+
+  <!-- ========== SEO PRINCIPAL ========== -->
+  <title>Portfolio de DefeNR | Visual Designer & UX/UI</title>
+  <meta name="description" content="Portfolio de DefeNR. Visual Designer, UX/UI y creativo digital. Mirá proyectos, experiencia y contactame para sumar diseño y creatividad a tu equipo o proyecto.">
+  <meta name="keywords" content="Portfolio, Visual Designer, UX/UI, Diseño, Creatividad, Proyectos, Argentina, Branding, Diseño Gráfico">
+  <meta name="author" content="Federico Núñez Rivero">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========== SEO SOCIAL (Open Graph) ========== -->
+  <meta property="og:title" content="Portfolio de DefeNR | Visual Designer & UX/UI">
+  <meta property="og:description" content="Portfolio de DefeNR. Visual Designer, UX/UI y creativo digital. Mirá proyectos, experiencia y contactame para sumar diseño y creatividad a tu equipo o proyecto.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://defenr.github.io/proyecto-final-coder/img/portfolio-og.webp">
+  <meta property="og:url" content="https://defenr.github.io/proyecto-final-coder/">
+
+  <!-- ========== FAVICON ========== -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
   <!-- ===========================
        GOOGLE FONTS
        =========================== -->
@@ -19,60 +36,55 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
-<!-- =========================================
-     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
-     ========================================= -->
-     <header>
-      <nav class="navbar-desktop">
-        <div class="logo">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/Logo.webp" alt="Logo DefeNR">
-          </a>
-        </div>
-        <ul class="menu">
-          <li><a href="index.html" class="activo">Hola</a></li>
-          <li><a href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
-          <li><a href="secciones/proyectos.html">Proyectos</a></li>
-          <li><a href="secciones/mi-recorrido.html">Mi recorrido</a></li>
-          <li><a href="secciones/hablemos.html">Hablamos</a></li>
-        </ul>
-      </nav>
-    </header>
-    
   <!-- =========================================
-   NAVBAR MOBILE (solo mobile, ocultar en desktop)
-   ========================================= -->
-  <nav class="navbar navbar-mobile d-md-none">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/Logo.webp" alt="Logo" style="width: 70px;">
+       NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+       ========================================= -->
+  <header>
+    <nav class="navbar-desktop" aria-label="Menú principal">
+      <div class="logo">
+        <a class="navbar-brand" href="index.html" aria-label="Inicio">
+          <img src="img/Logo.webp" alt="Logo DefeNR, ir al inicio">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarHamburguesa">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link activo" href="index.html">Hola</a></li>
-            <li class="nav-item"><a class="nav-link" href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
-            <li class="nav-item"><a class="nav-link" href="secciones/proyectos.html">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="secciones/mi-recorrido.html">Mi recorrido</a></li>
-            <li class="nav-item"><a class="nav-link" href="secciones/hablemos.html">Hablamos</a></li>
-          </ul>
-        </div>
       </div>
+      <ul class="menu">
+        <li><a href="index.html" class="activo" aria-current="page">Hola</a></li>
+        <li><a href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
+        <li><a href="secciones/proyectos.html">Proyectos</a></li>
+        <li><a href="secciones/mi-recorrido.html">Mi recorrido</a></li>
+        <li><a href="secciones/hablemos.html">Hablamos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================
+       NAVBAR MOBILE (solo mobile, ocultar en desktop)
+       ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none" aria-label="Menú móvil">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" aria-label="Inicio">
+        <img src="img/Logo.webp" alt="Logo DefeNR, ir al inicio" style="width: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarHamburguesa">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link activo" href="index.html" aria-current="page">Hola</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/soy-lo-que-soy.html">Soy lo que soy</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/mi-recorrido.html">Mi recorrido</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/hablemos.html">Hablamos</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-    
 
   <!-- =========================================
        SECCIÓN PRINCIPAL 
        ========================================= -->
   <main class="seccion-hola">
-    <!-- =======================
-         FOTO DE PERFIL Y TEXTO
-         ======================= -->
-    <section class="bienvenida">
-      <img src="img/perfil.webp" alt="Foto de DefeNR" class="perfil-img">
+    <section class="bienvenida" aria-label="Presentación">
+      <img src="img/perfil.webp" alt="Foto de Federico Núñez Rivero, Visual Designer y UX/UI" class="perfil-img">
       <div class="texto">
         <h1>¡Hola! Soy Defe.</h1>
         <p>Visual Designer con foco en UX/UI. Amante de las ideas simples y los desafíos grandes.</p>

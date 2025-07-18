@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DefeNR. | Portfolio</title>
+
+  <!-- ========== SEO PRINCIPAL ========== -->
+  <title>Sobre mí | DefeNR | Visual Designer & UX/UI</title>
+  <meta name="description" content="Conocé el perfil profesional de DefeNR: Visual Designer, UX/UI, experiencia en branding, productos digitales y campañas creativas. Descubrí sus skills y objetivos.">
+  <meta name="keywords" content="Sobre mí, Visual Designer, UX/UI, Skills, Creatividad, Portfolio, Branding, Experiencia">
+  <meta name="author" content="Federico Núñez Rivero">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========== SEO SOCIAL (Open Graph) ========== -->
+  <meta property="og:title" content="Sobre mí | DefeNR | Visual Designer & UX/UI">
+  <meta property="og:description" content="Perfil profesional, skills y objetivos de DefeNR, Visual Designer y UX/UI con experiencia en branding y creatividad digital.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://defenr.github.io/proyecto-final-coder/img/perfil.webp">
+  <meta property="og:url" content="https://defenr.github.io/proyecto-final-coder/secciones/soy-lo-que-soy.html">
+
+  <!-- ========== FAVICON ========== -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
   <!-- ===========================
        GOOGLE FONTS
        =========================== -->
@@ -19,77 +36,74 @@
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-
-<!-- =========================================
-     NAVBAR DESKTOP (solo desktop, ocultar en mobile)
-     ========================================= -->
-     <header>
-      <nav class="navbar-desktop">
-        <div class="logo">
-          <a class="navbar-brand" href="../index.html">
-          <img src="../img/Logo.webp" alt="Logo DefeNR">
-          </a>
-        </div>
-        <ul class="menu">
-          <li><a href="../index.html">Hola</a></li>
-          <li><a href="soy-lo-que-soy.html" class="activo">Soy lo que soy</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="mi-recorrido.html">Mi recorrido</a></li>
-          <li><a href="hablemos.html">Hablamos</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- =========================================
+       NAVBAR DESKTOP (solo desktop, ocultar en mobile)
+       ========================================= -->
+  <header>
+    <nav class="navbar-desktop" aria-label="Menú principal">
+      <div class="logo">
+        <a class="navbar-brand" href="../index.html" aria-label="Inicio">
+          <img src="../img/Logo.webp" alt="Logo DefeNR, ir al inicio">
+        </a>
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html">Hola</a></li>
+        <li><a href="soy-lo-que-soy.html" class="activo" aria-current="page">Soy lo que soy</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="mi-recorrido.html">Mi recorrido</a></li>
+        <li><a href="hablemos.html">Hablamos</a></li>
+      </ul>
+    </nav>
+  </header>
     
   <!-- =========================================
-   NAVBAR MOBILE (solo mobile, ocultar en desktop)
-   ========================================= -->
-  <nav class="navbar navbar-mobile d-md-none">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../img/Logo.webp" alt="Logo" style="width: 70px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarHamburguesa">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
-            <li class="nav-item"><a class="nav-link activo" href="soy-lo-que-soy.html">Soy lo que soy</a></li>
-            <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
-            <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
-          </ul>
-        </div>
+       NAVBAR MOBILE (solo mobile, ocultar en desktop)
+       ========================================= -->
+  <nav class="navbar navbar-mobile d-md-none" aria-label="Menú móvil">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html" aria-label="Inicio">
+        <img src="../img/Logo.webp" alt="Logo DefeNR, ir al inicio" style="width: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHamburguesa" aria-controls="navbarHamburguesa" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarHamburguesa">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Hola</a></li>
+          <li class="nav-item"><a class="nav-link activo" href="soy-lo-que-soy.html" aria-current="page">Soy lo que soy</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="mi-recorrido.html">Mi recorrido</a></li>
+          <li class="nav-item"><a class="nav-link" href="hablemos.html">Hablamos</a></li>
+        </ul>
       </div>
+    </div>
   </nav>
-    
 
   <!-- =========================================
        SECCIÓN PERFIL PROFESIONAL
        ========================================= -->
   <main>
-    <section class="perfil-profesional">
+    <section class="perfil-profesional" aria-labelledby="titulo-soy-lo-que-soy">
       <div class="contenedor">
-      <!-- ========== Resumen profesional + skills ========= -->
-      <div class="descripcion">
-        <h2>Soy lo que soy</h2>
-        <p>
-          Visual Designer y UX/UI con experiencia en branding, productos digitales y campañas integrales.<br>
-          Creativo, resolutivo y con visión estratégica.<br><br>
-          <strong>Skills:</strong>
-        </p>
-        <ul class="skills">
-          <li>Diseño gráfico avanzado</li>
-          <li>UX/UI y prototipado (Figma, Adobe XD)</li>
-          <li>Branding y dirección de arte</li>
-          <li>Marketing digital</li>
-          <li>Comunicación visual y storytelling</li>
-          <li>HTML, CSS y nociones de JavaScript</li>
-          <li>Trabajo en equipo y liderazgo creativo</li>
-        </ul>
-        <p><strong>Objetivo:</strong> Seguir creciendo en proyectos tech y potenciar equipos creativos.</p>
+        <div class="descripcion">
+          <h1 id="titulo-soy-lo-que-soy">Soy lo que soy</h1>
+          <p>
+            Visual Designer y UX/UI con experiencia en branding, productos digitales y campañas integrales.<br>
+            Creativo, resolutivo y con visión estratégica.<br><br>
+            <strong>Skills:</strong>
+          </p>
+          <ul class="skills">
+            <li>Diseño gráfico avanzado</li>
+            <li>UX/UI y prototipado (Figma, Adobe XD)</li>
+            <li>Branding y dirección de arte</li>
+            <li>Marketing digital</li>
+            <li>Comunicación visual y storytelling</li>
+            <li>HTML, CSS y nociones de JavaScript</li>
+            <li>Trabajo en equipo y liderazgo creativo</li>
+          </ul>
+          <p><strong>Objetivo:</strong> Seguir creciendo en proyectos tech y potenciar equipos creativos.</p>
+        </div>
       </div>
-    </div>
     </section>
   </main>
 
